@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 import { Link } from 'react-router-dom'
 
 export const FooterDiv = styled.div`
@@ -16,6 +16,10 @@ export const FooterP = styled.div`
   font-size: 16px;
   color: #fff;
   text-align: center;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 12px;
+  }
 `
 
 export const ApiLink = styled(Link)`

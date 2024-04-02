@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { colors } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 type BoxSelectProps = {
   selectIsVisible?: boolean
@@ -29,6 +29,11 @@ export const BoxTitle = styled.h3`
   color: #fff;
   font-size: 20px;
   margin: 65px 0;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 18px;
+    max-width: 80%;
+  }
 `
 
 export const BoxSelect = styled.select<BoxSelectProps>`
@@ -45,6 +50,10 @@ export const BoxSelect = styled.select<BoxSelectProps>`
     color: ${colors.text};
     padding: 10px;
   }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 80%;
+  }
 `
 
 export const BoxParagraph = styled.p<ParagraphProps>`
@@ -53,6 +62,11 @@ export const BoxParagraph = styled.p<ParagraphProps>`
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 48px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 14px;
+    max-width: 80%;
+  }
 `
 
 export const BoxButton = styled(Link)`
@@ -68,4 +82,8 @@ export const BoxButton = styled(Link)`
   text-decoration: none;
   text-align: center;
   padding: 12px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 80%;
+  }
 `
